@@ -15,23 +15,21 @@ theme = 'PaperMod'
 
   # --- 首页个人简介模式 (Profile Mode) ---
   [params.profileMode]
-    enabled = true
-    imageUrl = "avatar.jpg"      # 对应 static/avatar.jpg
-    imageTitle = "LabMem 001"
-    imageWidth = 120
-    imageHeight = 120
+    enabled = false
 
   # --- 首页文字内容 ---
   [params.homeInfoParams]
     Title = "Welcome to Lab Member No.001's Archive"
     Content = """
-    这里是世界线收束的观测点。
+  <img src="/avatar.jpg" alt="Avatar" style="border-radius: 50%; width: 120px; height: 120px; margin-bottom: 1rem;">
 
-    > “那并不是幻视。不管是那家伙的死，还是其他的什么，我确实全都清楚地记得。”
+  这里是世界线收束的观测点。
 
-    记录 Linux 折腾笔记、软件测试心得，以及前往日本的计划。
-    **El Psy Kongroo.**
-    """
+  > “那并不是幻视。不管是那家伙的死，还是其他的什么，我确实全都清楚地记得。”
+
+  记录 Linux 折腾笔记、软件测试心得，以及前往日本的计划。
+  **El Psy Kongroo.**
+  """
 
   # --- 社交链接 ---
   [[params.socialIcons]]
