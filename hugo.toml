@@ -1,26 +1,27 @@
 baseURL = 'https://NoDreamboat.github.io/'
 languageCode = 'zh-cn'
-title = 'Divergence 1.048596' # 博客标题
+title = 'Divergence 1.048596'
 theme = 'PaperMod'
 
-[params.assets]
-  favicon = "<link /favicon.ico>" # 下面会说
-
 [params]
-    [params.profileMode]
+  # --- 全局 Params 设置 (必须放在子模块之前) ---
+  defaultTheme = 'dark' # 强制深色模式
+
+  # --- Assets (Favicon 设置) ---
+  [params.assets]
+    # 注意：这里直接填文件名，不要填 HTML 代码
+    # 确保你的 favicon.ico 文件在 static/ 目录下
+    favicon = "favicon.ico"
+
+  # --- 首页个人简介模式 (Profile Mode) ---
+  [params.profileMode]
     enabled = true
-    imageUrl = "avatar.jpg"     # 对应 static/avatar.jpg
+    imageUrl = "avatar.jpg"      # 对应 static/avatar.jpg
     imageTitle = "LabMem 001"
     imageWidth = 120
     imageHeight = 120
 
-  # 默认深色模式，符合黑客/S;G氛围
-  defaultTheme = 'dark'
-
-  # 强调色，这里建议不要用默认的，虽然PaperMod不支持直接改hex，
-  # 但我们可以通过后续的CSS来把高亮色改成辉光管的橙色。
-
-  # 首页配置
+  # --- 首页文字内容 ---
   [params.homeInfoParams]
     Title = "Welcome to Lab Member No.001's Archive"
     Content = """
@@ -32,7 +33,7 @@ theme = 'PaperMod'
     **El Psy Kongroo.**
     """
 
-  # 社交链接 (替换成你的)
+  # --- 社交链接 ---
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/NoDreamboat"
@@ -40,20 +41,22 @@ theme = 'PaperMod'
     name = "email"
     url = "mailto:2363989669@qq.com"
 
-  # 顶部导航栏 (关键！添加归档和搜索)
-  [menu]
+# --- 菜单设置 (必须完全独立于 params 之外) ---
+[menu]
   [[menu.main]]
     identifier = "archives"
-    name = "Timeline"  # 把“归档”改成“时间线”，更有S;G味
+    name = "Timeline"
     url = "/archives/"
     weight = 10
+
   [[menu.main]]
     identifier = "search"
     name = "Search"
     url = "/search/"
     weight = 20
+
   [[menu.main]]
     identifier = "tags"
-    name = "Divergence" # 把“标签”改成“变动率”
+    name = "Divergence"
     url = "/tags/"
     weight = 30
