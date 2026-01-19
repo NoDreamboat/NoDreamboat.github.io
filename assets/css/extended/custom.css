@@ -1,0 +1,37 @@
+/* 强制深色背景为纯黑，更有深邃感 */
+:root {
+    --theme: #000000;
+    --entry: #101010;
+    --primary: #FF8C00; /* 辉光管橙色 */
+    --secondary: #a0a0a0;
+}
+
+/* 修改选中文字的颜色：黑底橙字 */
+::selection {
+    background: #FF8C00;
+    color: #000;
+}
+
+/* 给标题添加一点点“故障艺术”或者终端风格的字体（如果系统有的话） */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Courier New', Courier, monospace; /* 复古终端字体 */
+    color: #e0e0e0;
+}
+
+/* 首页头像变圆，并添加一点橙色光晕 */
+.profile img {
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.4);
+    border: 2px solid #333;
+}
+
+/* 链接颜色改为辉光管橙 */
+a {
+    color: #FF8C00;
+}
+
+/* 代码块样式微调 */
+.post-content pre {
+    border: 1px solid #333;
+    border-left: 3px solid #FF8C00;
+}
