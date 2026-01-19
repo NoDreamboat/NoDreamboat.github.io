@@ -1,0 +1,7 @@
+baseURL = 'https://NoDreamboat.github.io/' # 稍后会用到这个地址
+languageCode = 'zh-cn'
+title = '我的 CachyOS 博客'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = 'auto'
